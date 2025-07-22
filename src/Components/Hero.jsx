@@ -55,7 +55,7 @@ export default function Hero() {
         I craft scalable and flexible web applications using the <strong>MERN stack</strong>, focusing on performance, responsiveness, and user-centric design.
       </p>
       <div className="hero-button-container" >
-    <button className="hero-cta-button" style={{width:'10rem'}}><Link to="/contactpage" style={{textDecoration:'none'}} >Get in Touch</Link></button>
+    <button className="hero-cta-button" style={{width:'10rem'}}><Link to="/contactpage" style={{textDecoration:'none',color:'white'}} >Get in Touch</Link></button>
 
   </div>
     <div class="moving-line"></div>
@@ -67,10 +67,10 @@ export default function Hero() {
  
     <div className="social-share-icons"  
        >
-      <FacebookShareButton  ><FacebookIcon  size={40} round /></FacebookShareButton>
-      <TwitterShareButton><TwitterIcon size={40} round /></TwitterShareButton>
-      <LinkedinShareButton><LinkedinIcon size={40} round /></LinkedinShareButton>
-      <WhatsappShareButton><WhatsappIcon size={34} round /></WhatsappShareButton>
+      <FacebookShareButton  url='https://www.facebook.com/share/17GmbSPPH6/' ><FacebookIcon  size={40}  round /></FacebookShareButton>
+      <TwitterShareButton url='https://yourwebsite.com'><TwitterIcon size={40} round /></TwitterShareButton>
+      <LinkedinShareButton url='https://yourwebsite.com'><LinkedinIcon size={40} round /></LinkedinShareButton>
+      <WhatsappShareButton url='https:https://wa.me/08029190802'><WhatsappIcon size={34} round /></WhatsappShareButton>
     </div>
   
  
