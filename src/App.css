@@ -1351,7 +1351,7 @@ span{
  
  }
  .App-header-title{
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-size: clamp(1.6rem, 2vw, 1.5rem);
  }
  .App-hamburger {
    cursor: pointer;
@@ -1370,6 +1370,7 @@ span{
   cursor: pointer;
   border: 2px solid #040234 ;
   padding: 0.3em;
+  padding-left: 1rem;
 }
 
 .dropdown-list {
