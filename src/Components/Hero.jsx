@@ -1,5 +1,6 @@
  import React, { useState, useEffect } from 'react';
 import kingii from '../Image/kingii.png';
+import { Link } from 'react-router-dom';
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -54,8 +55,8 @@ export default function Hero() {
         I craft scalable and flexible web applications using the <strong>MERN stack</strong>, focusing on performance, responsiveness, and user-centric design.
       </p>
       <div className="hero-button-container" >
-    <button className="hero-cta-button" style={{width:'10rem'}}>Get in Touch</button>
-    
+    <button className="hero-cta-button" style={{width:'10rem'}}><Link to="/contact" >Get in Touch</Link></button>
+
   </div>
     <div class="moving-line"></div>
     </div>

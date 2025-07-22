@@ -1362,6 +1362,7 @@ span{
  .hamburger-menu {
   position: relative;
   display: inline-block;
+  margin-left: 0.5rem;
 }
 
 .App-hamburger {
