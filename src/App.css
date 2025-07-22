@@ -1338,16 +1338,20 @@ span{
     align-items: flex-start;
     z-index: 999px;
     margin-bottom: 0px;
+  
 
   }
  .App-tiltle-title{
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   display: flex;
  justify-content: space-between;
  align-items: center;
-   padding: 1rem 2rem;
-   column-gap: 10rem;
+   padding: 0.6rem 2rem;
+   column-gap: 7rem;
  
+ }
+ .App-header-title{
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
  }
  .App-hamburger {
    cursor: pointer;
@@ -1470,7 +1474,7 @@ span{
     padding-left: 1rem;
     font-family: poppins,sans-serif;
     font-size: 1rem;
-    padding-right: 4rem;
+    padding-right: 5rem;
     height: fit-content;
     margin-top: 0px;
      

@@ -39,7 +39,7 @@ export default function Hero() {
 
     
       <div className="hero">
-             <div className='spinner' style={{marginLeft:'100px'}}></div>
+           
   <div className="hero-container">
     
     {/* Text */}
