@@ -1,4 +1,5 @@
  import React, { useState, useEffect, useRef } from 'react';
+ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -123,16 +124,16 @@ export default function Menu() {
             transition={{ duration: 0.25 }}
           >
             <motion.li whileHover={{ scale: 1.05 }}>
-              <a href="#home">Home</a>
+              <Link to="/">Home</Link>
             </motion.li>
             <motion.li whileHover={{ scale: 1.05 }}>
-              <a href="#services">Services</a>
+              <Link to='/servicepage'>Services</Link>
             </motion.li>
             <motion.li whileHover={{ scale: 1.05 }}>
-              <a href="#projects">Projects</a>
+              <Link to="/projectspage">Projects</Link>
             </motion.li>
             <motion.li whileHover={{ scale: 1.05 }}>
-              <a href="#contact">Contact</a>
+              <Link to="/contactpage">Contact</Link>
             </motion.li>
             <motion.li whileHover={{ scale: 1.05 }}>
               <button

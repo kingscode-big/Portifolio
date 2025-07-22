@@ -1338,6 +1338,7 @@ span{
     align-items: flex-start;
     z-index: 999px;
     margin-bottom: 0px;
+    font-size: 1.5rem;
   
 
   }
@@ -1371,7 +1372,7 @@ span{
   font-size: 1.3rem;
   color: black;
   cursor: pointer;
-  border: 2px solid #040234 ;
+  border: 2px solid  blue ;
   padding: 0.3em;
  
 }
