@@ -55,7 +55,7 @@ export default function Hero() {
         I craft scalable and flexible web applications using the <strong>MERN stack</strong>, focusing on performance, responsiveness, and user-centric design.
       </p>
       <div className="hero-button-container" >
-    <button className="hero-cta-button" style={{width:'10rem'}}><Link to="/contact" >Get in Touch</Link></button>
+    <button className="hero-cta-button" style={{width:'10rem'}}><Link to="/contact" style={{listStyle:'none'}} >Get in Touch</Link></button>
 
   </div>
     <div class="moving-line"></div>
