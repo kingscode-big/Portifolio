@@ -1362,7 +1362,8 @@ span{
  .hamburger-menu {
   position: relative;
   display: inline-block;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
+ 
 }
 
 .App-hamburger {
@@ -1371,7 +1372,7 @@ span{
   cursor: pointer;
   border: 2px solid #040234 ;
   padding: 0.3em;
-  padding-left: 1rem;
+ 
 }
 
 .dropdown-list {
