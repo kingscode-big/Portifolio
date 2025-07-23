@@ -1339,7 +1339,7 @@ span{
     z-index: 999px;
     margin-bottom: 0px;
     font-size: 1.5rem;
-    width: fit-content;
+    width: 100%;
   
 
   }
