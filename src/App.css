@@ -1331,6 +1331,11 @@ span{
 
  
 @media (max-width: 768px) {
+  *{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+  }
   .App-header-container {
     flex-direction: column;
     height: 10rem;
