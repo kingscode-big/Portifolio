@@ -33,11 +33,33 @@ export default function Services() {
 
    
    
+ <div style={{
+  width: '100%',
+  height: '100px',
+  backgroundColor: '#052543',
+  position: 'relative',
+  overflow: 'hidden'
+}}>
   <div style={{
-        width:'100%',
-        height:'100px',
-        backgroundColor:'#052543'
-      }}></div>
+    width: '50px',
+    height: '50px',
+    backgroundColor: '#00d4ff',
+    borderRadius: '50%',
+    position: 'absolute',
+    top: '25px',
+    animation: 'moveBackAndForth 3s infinite alternate ease-in-out'
+  }}></div>
+
+  <style>
+    {`
+      @keyframes moveBackAndForth {
+        0% { left: 0; }
+        100% { left: calc(100% - 50px); }
+      }
+    `}
+  </style>
+</div>
+
    
   <section className="services-section" id="services" >
          
