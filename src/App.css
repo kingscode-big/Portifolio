@@ -898,7 +898,6 @@ span{
     align-items: flex-start;
     padding: 0.5rem;
     height: auto;
-    overflow: hidden;
   }
 
   .App-ul {
@@ -1047,7 +1046,6 @@ span{
     height: auto;
     flex-direction: column;
     align-items: flex-start;
-    overflow: hidden;
   }
 
   .App-ul {
@@ -1200,7 +1198,6 @@ span{
     align-items: flex-start;
     height: auto;
     padding: 1rem;
-    overflow: hidden;
   }
 
   .App-ul {
@@ -1339,7 +1336,6 @@ span{
     padding: 0px;
     margin: 0px;
     
-   
   }
   .App-header-container {
     flex-direction: column;
