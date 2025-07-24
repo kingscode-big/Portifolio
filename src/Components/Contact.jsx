@@ -1,8 +1,10 @@
- import React, { useEffect ,useState} from 'react';
+ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { MonitorCheck, Layers3 } from 'lucide-react';
 import { Code, Database } from 'lucide-react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import {
   FacebookShareButton,
@@ -18,95 +20,97 @@ import {
 import kingii from '../Image/kingii.png';
 
 export default function Contact() {
+  const [userDetail, setUserDetail] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
-
-   const [userDetail,setUserDetail]= useState(
-      {
-        name:'',
-        email:'',
-        message:''
-      }
-    
-)
   // handle users input
-  
- const handleInput = (e) => {
+  const handleInput = (e) => {
+    const { name, value } = e.target;
+    setUserDetail((prevDetail) => ({
+      ...prevDetail,
+      [name]: value,
+    }));
+  };
 
-    // console.log(e.target.value)
-  const { name, value } = e.target;
-  setUserDetail((prevDetail) => ({
-    ...prevDetail,
-    [name]: value,
-    
-  }));
-  // handle submit 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
+    try {
+      const response = await fetch('https://portifolioback.onrender.com/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userDetail),
+      });
 
-};
+      const result = await response.json();
 
-   const handleSubmit = async (e) => {
-  e.preventDefault();
+      if (!response.ok) {
+        throw new Error(result.message || 'Server returned an error');
+      }
 
-  try {
-    const response = await fetch('https://portifolioback.onrender.com/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(userDetail),
-    });
+      toast.success(result.message || 'Message sent successfully!');
+      setUserDetail({ name: '', email: '', message: '' });
 
-    const result = await response.json();
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast.error(`Something went wrong: ${error.message}`);
+    }
+  };
 
-    if (!response.ok) {
-  throw new Error(result.message || 'Server returned an error');
-}
-
-alert('Message sent successfully!');
-setUserDetail({ name: '', email: '', message: '' });
-
-  } catch (error) {
-    console.error('Error sending message:', error);
-    
-     alert(`Something went wrong: ${error.message}`);
-  }
-
-  
-  setUserDetail({ name: '', email: '', message: '' });
-};
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
   return (
     <>
-      <div style={{
-  width: '100%',
-  height: '100px',
-  backgroundColor: '#052543',
-  position: 'relative',
-  overflow: 'hidden'
-}}>
-  <div style={{
-    width: '50px',
-    height: '50px',
-    backgroundColor: '#00d4ff',
-    borderRadius: '50%',
-    position: 'absolute',
-    top: '25px',
-    animation: 'moveBackAndForth 3s infinite alternate ease-in-out'
-  }}></div>
+      <div
+        style={{
+          width: '100%',
+          height: '100px',
+          backgroundColor: '#052543',
+          position: 'relative',
+          overflow: 'hidden'
+        }}
+      >
+        <div
+          style={{
+            width: '50px',
+            height: '50px',
+            backgroundColor: '#00d4ff',
+            borderRadius: '50%',
+            position: 'absolute',
+            top: '25px',
+            animation: 'moveBackAndForth 3s infinite alternate ease-in-out'
+          }}
+        ></div>
 
-  <style>
-    {`
-      @keyframes moveBackAndForth {
-        0% { left: 0; }
-        100% { left: calc(100% - 50px); }
-      }
-    `}
-  </style>
-</div>
+        <style>
+          {`
+            @keyframes moveBackAndForth {
+              0% { left: 0; }
+              100% { left: calc(100% - 50px); }
+            }
+          `}
+        </style>
+      </div>
 
+      {/* Toast container for showing toasts */}
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
 
       <section
         id="contact"
@@ -278,9 +282,8 @@ setUserDetail({ name: '', email: '', message: '' });
                   required
                   className="contact-form-input"
                   id="name"
-                   onChange={handleInput}  value={userDetail.name}
-                  
-
+                  onChange={handleInput}
+                  value={userDetail.name}
                 />
               </div>
 
@@ -292,12 +295,11 @@ setUserDetail({ name: '', email: '', message: '' });
                   placeholder="Your Email*"
                   required
                   className="contact-form-input"
-                  id='email'
-                  onChange={handleInput} value={userDetail.email}
+                  id="email"
+                  onChange={handleInput}
+                  value={userDetail.email}
                 />
               </div>
-
-               
 
               <div className="form-group">
                 <label className="contact-form-label">Your message*</label>
@@ -307,9 +309,9 @@ setUserDetail({ name: '', email: '', message: '' });
                   rows="5"
                   required
                   className="contact-form-textarea"
-                  id='message'
-
-                  onChange={handleInput} value={userDetail.message}
+                  id="message"
+                  onChange={handleInput}
+                  value={userDetail.message}
                 />
               </div>
 
@@ -323,4 +325,3 @@ setUserDetail({ name: '', email: '', message: '' });
     </>
   );
 }
- 
