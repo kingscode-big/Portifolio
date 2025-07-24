@@ -48,7 +48,7 @@ export default function Contact() {
   e.preventDefault();
 
   try {
-    const response = await fetch('https://portifolioback.onrender.com/api/your-endpoint', {
+    const response = await fetch('https://portifolioback.onrender.com/send-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
