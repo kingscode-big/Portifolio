@@ -5,6 +5,8 @@ import { MonitorCheck, Layers3 } from 'lucide-react';
 import { Code, Database } from 'lucide-react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Lottie from 'lottie-react';
+import designerAnimation from  '../assets/Designer.json';
 
 import {
   FacebookShareButton,
@@ -68,6 +70,9 @@ export default function Contact() {
 
   return (
     <>
+  
+
+     
       <div
         style={{
           width: '100%',
@@ -77,6 +82,8 @@ export default function Contact() {
           overflow: 'hidden'
         }}
       >
+     
+     
         <div
           style={{
             width: '50px',
@@ -88,7 +95,7 @@ export default function Contact() {
             animation: 'moveBackAndForth 3s infinite alternate ease-in-out'
           }}
         ></div>
-
+       
         <style>
           {`
             @keyframes moveBackAndForth {
@@ -137,6 +144,15 @@ export default function Contact() {
                 marginLeft: '100px',
               }}
             />
+
+         <p  className='contactAni'  >
+          <Lottie 
+            animationData={designerAnimation} 
+            loop 
+            autoplay 
+            style={{ width: 300, height: 300 }}
+          />
+        </p>
           </div>
 
           <div className="contact-details">
@@ -147,11 +163,12 @@ export default function Contact() {
                 opacity: '0.5',
                 paddingTop: '2rem',
                 fontFamily: 'sans-serif',
+                fontSize: '1.5rem',
               }}
             >
               WRITE AN E-MAIL
             </p>
-            <p className="contact-email" style={{ fontSize: '2.2rem' }}>
+            <p className="contact-email" style={{ fontSize: '1.5rem' }}>
               kingsblog9ja@gmail.com
             </p>
 
@@ -161,22 +178,23 @@ export default function Contact() {
               className="contact-label"
               style={{
                 fontWeight: 'bold',
-                paddingTop: '1rem',
+                paddingTop: '0.3rem',
                 fontFamily: 'sans-serif',
                 opacity: '0.5',
+                fontSize: '1.5rem',
               }}
             >
               CALL ME
             </p>
             <p
               className="contact-phone"
-              style={{ fontSize: '2.2rem', paddingTop: '0.56rem' }}
+              style={{ fontSize: '1.5rem', paddingTop: '0.5rem' }}
             >
               +234 (8029190802)
             </p>
             <p
               className="contact-phone"
-              style={{ fontSize: '2.2rem', paddingTop: '0.56rem' }}
+              style={{ fontSize: '1.5rem', paddingTop: '0.5rem' }}
             >
               +237 (652631823)
             </p>

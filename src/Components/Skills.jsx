@@ -8,7 +8,15 @@ import designing from '../Image/designing.jpg'
 import webdev from '../Image/webdev.jpg'
 import testing from '../Image/testing.jpg'
 import tutoria from '../Image/tutoria.jpg'
-
+import { FaBug } from 'react-icons/fa'; 
+import { FaDatabase } from 'react-icons/fa';
+import { VscDebug } from 'react-icons/vsc'; 
+import { RiLayoutGridFill } from 'react-icons/ri';
+import { FaPaintBrush } from 'react-icons/fa';
+import { FaCode } from 'react-icons/fa';
+import { VscCode } from 'react-icons/vsc';
+import { FaLaptopCode } from 'react-icons/fa';
+ 
 export default function Skills() {
 
     useEffect(() => {
@@ -21,12 +29,63 @@ export default function Skills() {
         width:'100%',
         height:'100px',
         backgroundColor:'#052543'
-      }}></div>
+      }}>
+           
+      </div>
+
+      
    
     <section className="skills-section">
-        <h1 className="skills-section1" >    <h3>We provide
+      
+        <h1 className="skills-section1" >    <h3 style={{fontSize:'2rem'}} >Services Offers
           <br></br>
-          <p>We provide</p>
+          <ul style={{
+            listStyleType: 'none',
+            padding: '0.5rem',
+            margin: 0,
+            fontSize: '18px',
+            paddingTop:'2rem',
+             
+          
+          }}>
+            <li style={{padding:'1.5rem'}}>
+
+              
+               <p style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '1px',paddingRight:'3rem' }}>
+                <FaLaptopCode  size={20} title="web designing"  style={{color:'#ff7e5f'}} />
+              </p>
+              
+              <br></br>
+              
+              Web Development</li>
+            <li style={{padding:'1.5rem'}}>
+
+               <p style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '1px',paddingRight:'3rem' }}>
+                < FaPaintBrush size={20} title="web designing" style={{color:'yellow'}} />
+              </p>
+              
+              <br></br>
+              
+              Web Designing</li>
+            
+            <li style={{padding:'1.5rem'}}>
+
+               <p style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '1px',paddingRight:'3rem' }}>
+                < RiLayoutGridFill size={20} title="Database Management" style={{color:'green'}} />
+              </p>
+              
+              <br></br>
+              
+              CMS & Tutoria</li>
+              <li style={{padding:'1rem'}}>
+
+              <p style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '1px',paddingRight:'3rem' }}>
+                <FaBug size={20} title="Debugging" style={{color:'red'}} />
+              </p>
+              
+              <br></br>
+              App Testing & Debugging </li>
+          </ul>
         </h3>
                 
         </h1>
@@ -41,6 +100,8 @@ export default function Skills() {
         left: 0,
         right: 0,
         bottom: 0,
+        opacity:'0.4',
+        zIndex: 4,
         
         
         
@@ -87,11 +148,11 @@ export default function Skills() {
       backgroundPosition: 'center',
       height: '100%',
       width: '100%',
-      
+      opacity:'0.4',
+      zIndex: 4,
       top: 0,
       left: 0,
-      zIndex: 1,
-
+ 
       }}
       
       
@@ -194,6 +255,8 @@ export default function Skills() {
         boxShadow: '0 8px 20px rgba(0, 0, 0, 0.15)',
         backgroundPosition:'center',
         height:'450px',
+        opacity:'0.4',
+        zIndex: 4,
        
         top: 0,
         left: 0,

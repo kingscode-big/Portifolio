@@ -2,7 +2,8 @@
 import { Link } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-
+import { FaLaptopCode } from 'react-icons/fa';
+import { FaCode } from 'react-icons/fa';
 import Menu from './Menu';
 import Appointment from './Appointment';
 
@@ -14,7 +15,9 @@ export default function Header() {
 
           {/* Header Title and Hamburger Menu */}
           <div className="App-tiltle-title">
-            <h1 className="App-header-title">K .Nnamdi</h1>
+            <h1 className="App-header-title" style={{display:'flex'}}>  
+                        
+                         K .Nnamdi</h1>
             <Menu />
           </div>
 

@@ -570,7 +570,7 @@ span{
 
 .services-section{
   background-color: #051f37;
-  height: 30rem;
+  height: 60rem;
 }
 .services-title{
     padding-left: 80px;
@@ -587,7 +587,7 @@ span{
 
 
 .Testimonial-container{
-  height: 30rem;
+  height: 60rem;
   padding: 4rem 1rem;
   background-color: #041a2e;
 }
@@ -675,6 +675,9 @@ span{
   font-weight: bold;
   margin-bottom: 30px;
   color: #ffffff;
+}
+.contactAni{
+  display: none;
 }
 
 .contact-description {
@@ -899,7 +902,7 @@ span{
     padding: 0.5rem;
     height: auto;
   }
-
+ 
   .App-ul {
     flex-direction: column;
     gap: 0.25rem;
@@ -1007,6 +1010,9 @@ span{
   .contact-title {
     font-size: 1.2rem;
   }
+  .Testimonial-container{
+    height: 70rem;
+  }
 
   .contact-description {
     font-size: 0.8rem;
@@ -1014,6 +1020,12 @@ span{
 
   .contact-form {
     width: 100%;
+  }
+  .contactAni{
+    display:flex;
+    justify-content: center;
+    padding: 2rem;
+
   }
 
   .contact-form input,
@@ -1122,6 +1134,9 @@ span{
     width: 100%;
     margin: 0;
   }
+  .Testimonial-container{
+    height: 70rem;
+  }
 
   .about-text {
     font-size: 0.9rem;
@@ -1161,6 +1176,12 @@ span{
   .contact-section {
     padding: 1rem;
     display: block;
+  }
+    .contactAni{
+    display:flex;
+    justify-content: center;
+    padding: 2rem;
+
   }
 
   .contact-form,
@@ -1224,6 +1245,12 @@ span{
     width: 100%;
     padding: 0;
     height: auto;
+  }
+    .contactAni{
+    display:flex;
+    justify-content: center;
+    padding: 2rem;
+
   }
 
   .App-hero-image {
@@ -1290,6 +1317,9 @@ span{
   .skills-section {
     padding: 2rem 1rem;
     gap: 1rem;
+  }
+  .Testimonial-container{
+    height: 70rem;
   }
 
   /* Services */
@@ -1491,6 +1521,9 @@ span{
     margin-top: 0px;
      
   }
+  .Testimonial-container{
+    height: 100rem;
+  }
   .App-hero-image{
    width: 19rem;
    padding-bottom: 1rem;
@@ -1573,6 +1606,12 @@ span{
     background-color: #081b34;
  
  }
+   .contactAni{
+    display:flex;
+    justify-content: center;
+    padding: 2rem;
+
+  }
  .contact-image{
   display: none;
  }
@@ -1642,8 +1681,9 @@ span{
   }
 
   .contact-details {
-    width: 90%;
+    width: 100%;
     margin: auto;
+     
   }
 
   .contact-form {

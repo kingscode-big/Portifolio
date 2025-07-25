@@ -1,5 +1,7 @@
 import React from 'react'
 import { Code, MonitorCheck, Database, Layers3 } from "lucide-react";
+  import Lottie from 'lottie-react';
+ import developerAnimation from  '../assets/Developer Presentation (1).json';
 
 
 export default function Services() {
@@ -64,12 +66,23 @@ export default function Services() {
   <section className="services-section" id="services" >
          
   <div className="services-container">
+
+  
  <h2 
   className="services-title" >
   My Stack
 </h2>
+ <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
+      <Lottie 
+        animationData={developerAnimation} 
+        loop 
+        autoplay 
+        style={{ width: 300, height: 300 }}
+      />
+    </div>
 
-    <div className="services-grid">
+
+    <div className="services-grid" style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
       {services.map((service, index) => (
         <div key={index} className="service-card">
           <div className="service-icon">{service.icon}</div>

@@ -1,4 +1,6 @@
 import React from 'react'
+import Lottie from 'lottie-react';
+import selectionAnimation from  '../assets/selection list clients.json';
 
 export default function Testimonial() {
 
@@ -54,7 +56,16 @@ export default function Testimonial() {
   </style>
 </div>
 
-    <section  className='Testimonial-container'>
+    <section  className='Testimonial-container' style={{height:'fit-content'}}>
+     <p style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
+            <Lottie 
+              animationData={selectionAnimation} 
+              loop 
+              autoplay 
+              style={{ width: 300, height: 300 }}
+            />
+          </p>
+       
       <h2 style={{ textAlign: "center", marginBottom: "2rem",color:'white',fontSize:'30px',paddingTop:'10px' }}>What Clients Say</h2>
       <div style={{
         display: "grid",
@@ -63,6 +74,8 @@ export default function Testimonial() {
         maxWidth: "1000px",
         margin: "0 auto"
       }}>
+
+        
         {testimonials.map((t, index) => (
           <div key={index} style={{
             background: "white",
@@ -71,6 +84,7 @@ export default function Testimonial() {
             boxShadow: "0 8px 24px rgba(0, 0, 0, 0.05)",
             transition: "transform 0.3s ease",
           }}>
+            
             <p style={{ fontStyle: "italic", marginBottom: "1rem" }}>"{t.quote}"</p>
             <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
               <img src={t.image} alt={t.name} style={{ width: 50, height: 50, borderRadius: "50%" }} />
@@ -82,7 +96,9 @@ export default function Testimonial() {
           </div>
         ))}
       </div>
+      <br></br>
        <div className='spinner' style={{marginLeft:'200px'}}></div>
+      
     </section>
    
    </>
