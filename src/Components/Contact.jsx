@@ -5,8 +5,9 @@ import { MonitorCheck, Layers3 } from 'lucide-react';
 import { Code, Database } from 'lucide-react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Lottie from 'lottie-react';
-import designerAnimation from  '../assets/Designer.json';
+// import Lottie from 'lottie-react';
+// import designerAnimation from  '../assets/Designer.json';
+import lotti1 from '../Image/lotti1.gif'
 
 import {
   FacebookShareButton,
@@ -145,14 +146,11 @@ export default function Contact() {
               }}
             />
 
-         <p  className='contactAni'  >
-          <Lottie 
-            animationData={designerAnimation} 
-            loop 
-            autoplay 
-            style={{ width: 300, height: 300 }}
-          />
-        </p>
+          <p  className='contactAni'  >
+          
+          
+            <img src={lotti1} alt="Loading Animation" style={{ width: 300, height: 300 }} />
+        </p> 
           </div>
 
           <div className="contact-details">

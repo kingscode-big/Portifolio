@@ -1521,11 +1521,9 @@ span{
     margin-top: 0px;
      
   }
-  .Testimonial-container{
-    height: 100rem;
-  }
+   
   .App-hero-image{
-   width: 19rem;
+   width : 19rem;
    padding-bottom: 1rem;
    height: 22rem;
    margin-right: 15rem;

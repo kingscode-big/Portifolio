@@ -1,6 +1,6 @@
 import React from 'react'
-import Lottie from 'lottie-react';
-import selectionAnimation from  '../assets/selection list clients.json';
+// import Lottie from 'lottie-react';
+// import selectionAnimation from  '../assets/selection list clients.json';
 
 export default function Testimonial() {
 
@@ -57,15 +57,7 @@ export default function Testimonial() {
 </div>
 
     <section  className='Testimonial-container' style={{height:'fit-content'}}>
-     <p style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
-            <Lottie 
-              animationData={selectionAnimation} 
-              loop 
-              autoplay 
-              style={{ width: 300, height: 300 }}
-            />
-          </p>
-       
+    
       <h2 style={{ textAlign: "center", marginBottom: "2rem",color:'white',fontSize:'30px',paddingTop:'10px' }}>What Clients Say</h2>
       <div style={{
         display: "grid",
