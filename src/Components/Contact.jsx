@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import Lottie from 'lottie-react';
 // import designerAnimation from  '../assets/Designer.json';
-import lotti1 from '../Image/lotti1.gif'
+import walking from '../Image/walking.png'
 
 import {
   FacebookShareButton,
@@ -149,7 +149,7 @@ export default function Contact() {
           <p  className='contactAni'  >
           
           
-            <img src={lotti1} alt="Loading Animation" style={{ width: 300, height: 300 }} />
+            <img src={walking} alt="Loading Animation" style={{ width: '100%', height: '100%' }} />
         </p> 
           </div>
 
