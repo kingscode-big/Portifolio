@@ -1,6 +1,7 @@
 import React from 'react'
 // import Lottie from 'lottie-react';
 // import selectionAnimation from  '../assets/selection list clients.json';
+import animated from '../Image/output-onlinegiftools.gif'
 
 export default function Testimonial() {
 
@@ -55,10 +56,14 @@ export default function Testimonial() {
     `}
   </style>
 </div>
-
+ 
     <section  className='Testimonial-container' style={{height:'fit-content'}}>
     
       <h2 style={{ textAlign: "center", marginBottom: "2rem",color:'white',fontSize:'30px',paddingTop:'10px' }}>What Clients Say</h2>
+          <p style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
+     <img src={animated} alt="Developer Animation" style={{ width: '300px', height: '300px' }} />
+     </p>
+      
       <div style={{
         display: "grid",
         gap: "2rem",
@@ -66,8 +71,8 @@ export default function Testimonial() {
         maxWidth: "1000px",
         margin: "0 auto"
       }}>
-
-        
+  
+       
         {testimonials.map((t, index) => (
           <div key={index} style={{
             background: "white",

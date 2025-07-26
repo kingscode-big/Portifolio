@@ -6,6 +6,7 @@ import { FaLaptopCode } from 'react-icons/fa';
 import { FaCode } from 'react-icons/fa';
 import Menu from './Menu';
 import Appointment from './Appointment';
+import DownloadVC from './DownloadVC';
 
 export default function Header() {
   return (
@@ -44,6 +45,7 @@ export default function Header() {
 
           {/* Appointment Modal Trigger */}
           <Appointment />
+          <DownloadVC />
 
         </div>
       </section>

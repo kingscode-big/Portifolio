@@ -1,4 +1,6 @@
  import React from 'react';
+ 
+
 
 const projects = [
   {
@@ -63,7 +65,7 @@ export default function Project() {
         <h2 className="section-title" style={{ color: 'white', textAlign: 'start' }}>
           Recent Projects
         </h2>
-
+           
         <div className="projects-grid">
           {projects.map(({ id, title, description, imageUrl, demoLink, repoLink }) => (
             <div key={id} className="project-card">

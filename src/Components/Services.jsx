@@ -2,6 +2,8 @@ import React from 'react'
 import { Code, MonitorCheck, Database, Layers3 } from "lucide-react";
 //   import Lottie from 'lottie-react';
 //  import developerAnimation from  '../assets/Developer Presentation (1).json';
+import devworkphotom from '../Image/devwork-Photoroom.png'
+
 
 
 export default function Services() {
@@ -72,14 +74,10 @@ export default function Services() {
   className="services-title" >
   My Stack
 </h2>
- {/* <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
-      <Lottie 
-        animationData={developerAnimation} 
-        loop 
-        autoplay 
-        style={{ width: 300, height: 300 }}
-      />
-    </div> */}
+ 
+  <p style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
+    <img src={devworkphotom} alt="Developer Animation" style={{ width: '300px', height: '300px' }} />
+    </p> 
 
 
     <div className="services-grid" style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>

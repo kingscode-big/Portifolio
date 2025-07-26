@@ -16,6 +16,7 @@ import { FaPaintBrush } from 'react-icons/fa';
 import { FaCode } from 'react-icons/fa';
 import { VscCode } from 'react-icons/vsc';
 import { FaLaptopCode } from 'react-icons/fa';
+ import output from  '../Image/output-onlinegiftools (1).gif'
  
 export default function Skills() {
 
@@ -33,9 +34,14 @@ export default function Skills() {
            
       </div>
 
-      
-   
+     <section className='skills-animated-output' >
+      <p style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
+             <img src={output} alt="Developer Animation" style={{ width: '100%', height: '100%' }} />
+             </p>
+
+
     <section className="skills-section">
+      
       
         <h1 className="skills-section1" >    <h3 style={{fontSize:'2rem'}} >Services Offers
           <br></br>
@@ -94,7 +100,7 @@ export default function Skills() {
         backgroundImage:`url(${designing})`,
         backgroundSize:'cover',
         backgroundPosition:'center',
-        height:'450px',
+        height:'300px',
         boxShadow: '0 8px 20px rgba(0, 0, 0, 0.30)',
         top: 0,
         left: 0,
@@ -201,7 +207,7 @@ export default function Skills() {
         backgroundImage:`url(${testing})`,
         backgroundSize:'cover',
         backgroundPosition:'center',
-        height:'450px',
+        height:'300px',
         opacity:0.9,
         top: 0,
         left: 0,
@@ -254,7 +260,7 @@ export default function Skills() {
         backgroundSize:'cover',
         boxShadow: '0 8px 20px rgba(0, 0, 0, 0.15)',
         backgroundPosition:'center',
-        height:'450px',
+        height:'300px',
         opacity:'0.4',
         zIndex: 4,
        
@@ -307,7 +313,7 @@ export default function Skills() {
       </div>
     </section>
      
-    
+    </section>
     </>
   )
 }

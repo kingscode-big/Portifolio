@@ -284,11 +284,15 @@ span{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  
+  width: 100%;
   padding: 60px 20px;
-  background-color: #041b32;
+ 
   text-align: center;
   font-family: poppins,sans-serif;
+}
+.skills-animated-output{
+  display: none;
+  
 }
 
 .skill-card {
@@ -545,6 +549,13 @@ span{
   background-color: #4b5563;
 }
 
+
+/* downloading of cv */
+
+/* src/components/DownloadCV.css */
+
+ 
+
 /* Responsive */
 
 @media (max-width: 480px) {
@@ -573,8 +584,8 @@ span{
   height: 60rem;
 }
 .services-title{
-    padding-left: 80px;
-    background-color: #052849;  
+    margin-left: 1.5rem;
+    background-color: #335192;  
     color: white;               
     padding: 10px;              
     border-radius: 10px;        
@@ -582,6 +593,7 @@ span{
     font-size: 15px;
     font-family: sans-serif;
     padding-top: 10px; 
+    
      
 }
 
@@ -632,12 +644,13 @@ span{
 }
 
 /* Title */
-.service-title {
+/* .service-title {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: #2e526b;
-}
+  padding-left: 2rem;
+} */
 
 .service-title.dark {
   color: #f0f0f0;
@@ -1049,6 +1062,14 @@ span{
     flex-direction: column;
     gap: 0.25rem;
   }
+  .skills-animated-output{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  width: 100%;
+  background-color: #041b32;
+}
 }
 
 @media (max-width: 400px) {
@@ -1150,6 +1171,14 @@ span{
     padding: 1rem;
     gap: 1rem;
   }
+  .skills-animated-output{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  width: 100%;
+  background-color: #041b32;
+}
 
   .service-card {
     max-width: 100%;
@@ -1318,6 +1347,14 @@ span{
     padding: 2rem 1rem;
     gap: 1rem;
   }
+  .skills-animated-output{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  width: 100%;
+  background-color: #041b32;
+}
   .Testimonial-container{
     height: 70rem;
   }
@@ -1369,7 +1406,7 @@ span{
   }
   .App-header-container {
     flex-direction: column;
-    height: 10rem;
+    height: 11.7rem;
     padding: 1rem;
     align-items: flex-start;
     z-index: 999px;
@@ -1416,7 +1453,7 @@ span{
 
 .dropdown-list {
   position: fixed;
-  top: 10rem;  
+  top: 11.5rem;  
   right: 0;
   width: 100%;  
   background-color: #e5e9f2;
@@ -1557,6 +1594,7 @@ span{
     margin-top: 2rem;
     margin-left: 1rem;
   }
+  
 
   /*About responsiveness */
 
@@ -1596,6 +1634,14 @@ span{
  .Testimonial-container{
   height: 50rem;
  }
+ .skills-animated-output{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  width: 100%;
+  background-color: #041b32;
+}
 
  /*Contact style responsiveness*/
 
