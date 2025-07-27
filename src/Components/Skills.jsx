@@ -1,319 +1,153 @@
-import React from 'react'
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from 'react';
+ import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faStar  } from '@fortawesome/free-solid-svg-icons';
-import designing from '../Image/designing.jpg'
-import webdev from '../Image/webdev.jpg'
-import testing from '../Image/testing.jpg'
-import tutoria from '../Image/tutoria.jpg'
-import { FaBug } from 'react-icons/fa'; 
-import { FaDatabase } from 'react-icons/fa';
-import { VscDebug } from 'react-icons/vsc'; 
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { FaBug, FaDatabase, FaPaintBrush, FaCode, FaLaptopCode } from 'react-icons/fa';
+import { VscDebug, VscCode } from 'react-icons/vsc';
 import { RiLayoutGridFill } from 'react-icons/ri';
-import { FaPaintBrush } from 'react-icons/fa';
-import { FaCode } from 'react-icons/fa';
-import { VscCode } from 'react-icons/vsc';
-import { FaLaptopCode } from 'react-icons/fa';
- import output from  '../Image/output-onlinegiftools (1).gif'
- 
-export default function Skills() {
 
-    useEffect(() => {
+import designing from '../Image/designing.jpg';
+import webdev from '../Image/webdev.jpg';
+import testing from '../Image/testing.jpg';
+import tutoria from '../Image/tutoria.jpg';
+import output from '../Image/output-onlinegiftools (1).gif';
+
+export default function Skills() {
+  useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
-  
+
+  const overlayStyle = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    zIndex: 1,
+  };
+
+  const relativeText = {
+    position: 'relative',
+    zIndex: 2,
+  };
+
   return (
     <>
-    <div style={{
-        width:'100%',
-        height:'100px',
-        backgroundColor:'#052543'
-      }}>
-           
-      </div>
+      <div style={{ width: '100%', height: '100px', backgroundColor: '#052543' }}></div>
 
-     <section className='skills-animated-output' >
-      <p style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
-             <img src={output} alt="Developer Animation" style={{ width: '100%', height: '100%' }} />
-             </p>
+      <section className='skills-animated-output'>
+        <p style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
+          <img src={output} alt="Developer Animation" style={{ width: '100%', height: '100%' }} />
+        </p>
 
+        <section className="skills-section" style={{ height: '150rem', paddingTop: '2rem', paddingBottom: '2rem' }}>
+          <h1 className="skills-section1">
+            <h3 style={{ fontSize: '2rem', textAlign: 'center' }}>
+              Services Offers
+              <br />
+              <ul style={{
+                listStyleType: 'none',
+                padding: '0.5rem',
+                margin: 0,
+                fontSize: '18px',
+                paddingTop: '2rem',
+                textAlign: 'center'
+              }}>
+                {[
+                  { icon: <FaLaptopCode size={20} style={{ color: '#00bcd4' }} />, text: 'Web Development' },
+                  { icon: <FaPaintBrush size={20} style={{ color: '#00bcd4' }} />, text: 'Web Designing' },
+                  { icon: <RiLayoutGridFill size={20} style={{ color: '#00bcd4' }} />, text: 'CMS & Tutoria' },
+                  { icon: <FaBug size={20} style={{ color: '#00bcd4' }} />, text: 'App Testing & Debugging' }
+                ].map((item, index) => (
+                  <li key={index} style={{ padding: '1.5rem' }}>
+                    <p style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      paddingBottom: '0.5rem'
+                    }}>
+                      {item.icon}
+                    </p>
+                    {item.text}
+                  </li>
+                ))}
+              </ul>
+            </h3>
+          </h1>
 
-    <section className="skills-section">
-      
-      
-        <h1 className="skills-section1" >    <h3 style={{fontSize:'2rem'}} >Services Offers
-          <br></br>
-          <ul style={{
-            listStyleType: 'none',
-            padding: '0.5rem',
-            margin: 0,
-            fontSize: '18px',
-            paddingTop:'2rem',
-             
-          
-          }}>
-            <li style={{padding:'1.5rem'}}>
-
-              
-               <p style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '1px',paddingRight:'3rem' }}>
-                <FaLaptopCode  size={20} title="web designing"  style={{color:'#ff7e5f'}} />
+          {/* Skill Cards */}
+          {[
+            {
+              bg: designing,
+              title: 'Website Design',
+              description: 'I craft modern, responsive, and user-focused web interfaces using a blend of HTML, CSS, JavaScript, and React. My approach to web design goes beyond aesthetics —'
+            },
+            {
+              bg: webdev,
+              title: 'Web Development',
+              description: 'I build dynamic, responsive web applications using technologies like HTML, CSS, JavaScript, and frameworks such as React, Node.js, and MongoDB.'
+            },
+            {
+              bg: testing,
+              title: 'App Testing & Debugging',
+              description: 'I build dynamic, responsive web applications and test them before deployment using technologies like Jest, Mochia, React Testing Library.'
+            },
+            {
+              bg: tutoria,
+              title: 'CMS & Tutoria',
+              description: 'I design, develop, deploy and teach my expertise, from zero to master including CMS using WordPress.'
+            }
+          ].map((card, index) => (
+            <div
+              key={index}
+              className="skill-card"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              style={{
+                position: 'relative',
+                backgroundImage: `url(${card.bg})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                height: '450px',
+                marginBottom: '2rem',
+                boxShadow: index === 0 ? '0 8px 20px rgba(0, 0, 0, 0.30)' : undefined
+              }}
+            >
+              <div style={overlayStyle}></div>
+              <h3 style={{
+                marginTop: '210px',
+                color: 'white',
+                fontWeight: 'bold',
+                fontSize: '25px',
+                textAlign: 'start',
+                ...relativeText
+              }}>{card.title}</h3>
+              <p style={{
+                fontSize: '15px',
+                color: 'white',
+                opacity: '0.7',
+                textAlign: 'start',
+                paddingTop: '10px',
+                ...relativeText
+              }}>{card.description}</p>
+              <br />
+              <hr style={relativeText} />
+              <p style={{
+                color: '#ffc107',
+                textAlign: 'start',
+                paddingTop: '3px',
+                ...relativeText
+              }}>
+                {[...Array(5)].map((_, i) => (
+                  <FontAwesomeIcon key={i} icon={faStar} />
+                ))}
               </p>
-              
-              <br></br>
-              
-              Web Development</li>
-            <li style={{padding:'1.5rem'}}>
-
-               <p style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '1px',paddingRight:'3rem' }}>
-                < FaPaintBrush size={20} title="web designing" style={{color:'yellow'}} />
-              </p>
-              
-              <br></br>
-              
-              Web Designing</li>
-            
-            <li style={{padding:'1.5rem'}}>
-
-               <p style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '1px',paddingRight:'3rem' }}>
-                < RiLayoutGridFill size={20} title="Database Management" style={{color:'green'}} />
-              </p>
-              
-              <br></br>
-              
-              CMS & Tutoria</li>
-              <li style={{padding:'1rem'}}>
-
-              <p style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '1px',paddingRight:'3rem' }}>
-                <FaBug size={20} title="Debugging" style={{color:'red'}} />
-              </p>
-              
-              <br></br>
-              App Testing & Debugging </li>
-          </ul>
-        </h3>
-                
-        </h1>
-         
-      <div className="skill-card" style={{
-        backgroundImage:`url(${designing})`,
-        backgroundSize:'cover',
-        backgroundPosition:'center',
-        height:'300px',
-        boxShadow: '0 8px 20px rgba(0, 0, 0, 0.30)',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        opacity:'0.4',
-        zIndex: 4,
-        
-        
-        
-      }} data-aos="fade-up">
-       
-        <h3 style={{
-          marginTop:'210px',
-          color:'white',
-          textAlign:'start',
-          fontWeight:'bold',
-          fontSize:'25px',
-          zIndex:2
-         
-        }}>Website Design</h3>
-        <p style={{
-          fontSize:'15px',
-          color:'white',
-          opacity:'0.7',
-          textAlign:'start',
-          paddingTop:'10px'
-        }}>I craft modern, responsive, and user-focused web interfaces
-           using a blend of HTML, CSS, JavaScript, and React. My approach
-            to web design goes beyond aesthetics — 
-          </p><br></br>
-          <hr></hr>
-          <p style={{
-            color:'#ffc107',
-            textAlign:'start',
-            paddingTop:'3px'
-          }}>
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-        
-          </p>
-           
-      </div>
-      <div className="skill-card" data-aos="fade-up" data-aos-delay="100"
-      style={{
-        backgroundImage:`url(${webdev})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      height: '100%',
-      width: '100%',
-      opacity:'0.4',
-      zIndex: 4,
-      top: 0,
-      left: 0,
- 
-      }}
-      
-      
-      >
-        <h3 style={{
-          marginTop:'210px',
-          color:'white',
-          textAlign:'start',
-          fontWeight:'bold',
-          fontSize:'25px',
-          zIndex:3
-         
-        }}>Web Development</h3>
-        <p style={{
-          fontSize:'15px',
-          color:'white',
-          opacity:'0.7',
-          textAlign:'start',
-          paddingTop:'10px'
-        }}> I  build dynamic,
-         responsive web applications using technologies 
-         like HTML, CSS, JavaScript, and frameworks such as React, Node.js,
-         and MongoDB.</p>
-      
-          <hr></hr>
-
-            <p style={{
-            color:'#ffc107',
-            textAlign:'start',
-            paddingTop:'3px'
-          }}>
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-        
-          </p>
-           
-      
-         
-        
-      </div>
-      <div className="skill-card" data-aos="fade-up" data-aos-delay="200"
-           style={{
-        backgroundImage:`url(${testing})`,
-        backgroundSize:'cover',
-        backgroundPosition:'center',
-        height:'300px',
-        opacity:0.9,
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        zIndex: 3,
-
-      }}>
-          <h3 style={{
-          marginTop:'210px',
-          color:'white',
-          textAlign:'start',
-          fontWeight:'bold',
-          fontSize:'25px',
-          zIndex:3
-         
-        }}>App Testing &  Debugging</h3>
-         
-        <p style={{
-          fontSize:'15px',
-          color:'white',
-          opacity:'0.7',
-          textAlign:'start',
-          paddingTop:'10px'
-        }}> I  build dynamic,
-         responsive web applications  and test them before deployment using technologies 
-         like  Jest ,mochia ,React Testing Library .
-         </p>
-         <br></br>
-      
-          <hr></hr>
-
-            <p style={{
-            color:'#ffc107',
-            textAlign:'start',
-            paddingTop:'3px'
-          }}>
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-        
-          </p>
-      
-      </div>
-      <div className="skill-card" data-aos="fade-up" data-aos-delay="300"
-        style={{
-        backgroundImage:`url(${tutoria})`,
-        backgroundSize:'cover',
-        boxShadow: '0 8px 20px rgba(0, 0, 0, 0.15)',
-        backgroundPosition:'center',
-        height:'300px',
-        opacity:'0.4',
-        zIndex: 4,
-       
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        
-
-      }}
-      >
-        <h3 style={{
-          marginTop:'210px',
-          color:'white',
-          textAlign:'start',
-          fontWeight:'bold',
-          fontSize:'25px',
-          zIndex:3
-         
-        }}>CMS & Tutoria</h3>
-
-         <p style={{
-          fontSize:'15px',
-          color:'white',
-          opacity:'0.7',
-          textAlign:'start',
-          paddingTop:'30px'
-        }}> I design , develop ,deploy and as well teach my expertise ,
-          from zero to master including CMS using Wordpress.
-         </p>
-         <br></br>
-         <br></br>
-      
-          <hr></hr>
-
-            <p style={{
-            color:'#ffc107',
-            textAlign:'start',
-            paddingTop:'3px'
-          }}>
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
-        
-          </p>
-        
-      
-      </div>
-    </section>
-     
-    </section>
+            </div>
+          ))}
+        </section>
+      </section>
     </>
-  )
+  );
 }
