@@ -69,6 +69,18 @@ export default function Contact() {
     AOS.init({ duration: 1000 });
   }, []);
 
+
+  const [isSent, setIsSent] = useState(false);
+
+  const handleSend = (e) => {
+    e.preventDefault();
+    
+    // Simulate sending message
+    setIsSent(true);
+
+    // Reset after 3 seconds (optional)
+    setTimeout(() => setIsSent(false), 3000);
+  };
   return (
     <>
   
@@ -331,8 +343,13 @@ export default function Contact() {
                 />
               </div>
 
-              <button type="submit" className="contact-form-button">
-                Send Message
+            <button
+                type="submit"
+                className={`contact-form-button ${isSent ? 'sent' : ''}`}
+                onClick={handleSend}
+                disabled={isSent}
+              >
+                {isSent ? 'Message Sent!' : 'Send Message'}
               </button>
             </form>
           </div>

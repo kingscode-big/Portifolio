@@ -758,6 +758,33 @@ span{
   transition: background-color 0.3s ease;
 }
 
+
+.contact-form-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.contact-form-button:active {
+  transform: scale(0.95);
+}
+
+.contact-form-button.sent {
+  background-color: #28a745 !important; /* green */
+  cursor: not-allowed;
+}
+
+
 .contact-form button:hover {
   background-color: #005bb5;
 }
