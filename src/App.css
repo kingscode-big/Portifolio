@@ -177,16 +177,17 @@
   z-index: 1;
 }
 .App-kings{
-  border: 1px solid #0b3e6e ;
-  background-color: #0b3e6e;
+  border: 1px solid #335192 ;
+  background-color: #335192;
   padding:5px;
   outline: none;
   border-radius: 5px ;
   font-size: 20px;
   font-family: poppins,sans-serif;
-  color: rgb(131, 128, 128);
+  color: white;
   text-align: start;
   margin-right: 250px;
+  margin-left: 1rem;
 }
 
 .App-container-container{
@@ -1433,7 +1434,7 @@ span{
   }
   .App-header-container {
     flex-direction: column;
-    height: 11.7rem;
+    height: 10rem;
     padding: 1rem;
     align-items: flex-start;
     z-index: 999px;
@@ -1448,7 +1449,7 @@ span{
   display: flex;
  justify-content: space-between;
  align-items: center;
-   padding: 1rem 2rem;
+   padding: 3rem 2rem;
    column-gap: 7rem;
    padding-right: 1rem;
  
@@ -1480,7 +1481,7 @@ span{
 
 .dropdown-list {
   position: fixed;
-  top: 11.5rem;  
+  top: 10rem;  
   right: 0;
   width: 100%;  
   background-color: #e5e9f2;
@@ -1490,7 +1491,7 @@ span{
   padding: 0;
   margin: 0;
   z-index: 999;
-  height: 20rem;
+  height: 29rem;
   font-family: poppins,sans-serif;
 }
 

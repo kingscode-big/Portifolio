@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { motion, AnimatePresence } from 'framer-motion';
 import DatePicker from 'react-datepicker';
+import DownloadVC from './DownloadVC';
 import 'react-datepicker/dist/react-datepicker.css';
 
 export default function Menu() {
@@ -143,6 +144,9 @@ export default function Menu() {
               >
                 Book an Appointment
               </button>
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.05 }} style={{ marginTop: '0.5rem',marginLeft:'1rem' }}>
+            <DownloadVC />
             </motion.li>
           </motion.ul>
         )}

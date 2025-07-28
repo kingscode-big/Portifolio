@@ -62,7 +62,7 @@ export default function Project() {
 
       <section id="projects" className="projects-section">
         <h2 className="project-text-header">MY WORK</h2>
-        <h2 className="section-title" style={{ color: 'white', textAlign: 'start' }}>
+        <h2 className="section-title" style={{ color: 'white', textAlign: 'start', paddingTop:'1.3rem' }}>
           Recent Projects
         </h2>
            

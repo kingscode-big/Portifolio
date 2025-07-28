@@ -45,7 +45,7 @@ export default function Hero() {
     
     {/* Text */}
     <div className="typewriter">
-      <p className='App-kings'>Software Developer</p>
+      <p className='App-kings'>Web Developer</p>
       <br />
       <p className='App-hero-texts'>Hi, I'm Kingsley a<br /></p>
       <div className="App-container-container"> 

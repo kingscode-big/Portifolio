@@ -20,6 +20,7 @@ export default function App() {
           <Route path='/projectspage' element={<ProjectsPage />} />
           <Route path='/servicepage' element={<ServicePage />} />
           <Route path='/contactpage' element={<ContactPage />} />
+          
         </Routes>
       </BrowserRouter>
     </>

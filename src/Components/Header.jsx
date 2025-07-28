@@ -45,7 +45,7 @@ export default function Header() {
 
           {/* Appointment Modal Trigger */}
           <Appointment />
-          <DownloadVC />
+     
 
         </div>
       </section>

@@ -42,10 +42,10 @@ export default function Skills() {
           <img src={output} alt="Developer Animation" style={{ width: '100%', height: '100%' }} />
         </p>
 
-        <section className="skills-section" style={{ height: '150rem', paddingTop: '2rem', paddingBottom: '2rem' }}>
-          <h1 className="skills-section1">
+        <section className="skills-section" style={{ height: '160rem', paddingTop: '2rem', paddingBottom: '2rem',   }}>
+          <h1 className="skills-section1" style={{backgroundColor:'white', color:'black'}}>
             <h3 style={{ fontSize: '2rem', textAlign: 'center' }}>
-              Services Offers
+              Services Offer
               <br />
               <ul style={{
                 listStyleType: 'none',

@@ -61,13 +61,13 @@ export default function About() {
        
       </div>
       <div className='about-text-container'>
-        <h2 className="about-heading"style={{fontSize:'15px', textAlign:'start',backgroundColor:'#042e55',padding:'10px',marginRight:'15rem',borderRadius:'5px'}}>ABOUT ME</h2>
+        <h2 className="about-heading"style={{fontSize:'15px', textAlign:'start',backgroundColor:'#335192',padding:'10px',marginRight:'15rem',borderRadius:'5px'}}>ABOUT ME</h2>
       <p className="about-text">
         <h2 style={{fontSize:'35px' ,fontFamily:'Segoe UI'}}>I AM AVAILABLE FOR <span style={{color:'#067ce9',fontSize:'35px'}}>
           FRONTEND AND BACKEND</span> PROJECTS</h2>
-        Hi, I'm a full-stack  MERN developer  passionate about building end-to-end web applications using  MongoDB,
-         Express.js, React, and Node.js . I love crafting fast, scalable, and user-friendly solutions that solve
-         real-world problems. I'm always eager to learn and improve my skills, and I'm excited
+        Hi, I'm a full-stack  MERN developer  passionate about building end-to-end web applications using <b> MongoDB,
+         Express.js, React, and Node.js </b>. I love crafting fast, scalable, and user-friendly solutions that solve
+         real-world problems. I'm always eager to learn and improve my skills, and I'm excited.
       </p>
       <p className="about-text">
         On the frontend, I specialize in building responsive interfaces with  React.js, utilizing tools like Redux, Context API, 
@@ -76,7 +76,7 @@ export default function About() {
       </p>
       <p className='about-text'>
         I'm always exploring new technologies and following best practices in full-stack development. I'm 
-        currently open to  full-time and freelance opportunities where I can contribute, grow, and build impactful applications 
+        currently open to  full-time and freelance opportunities where I can contribute, grow, and build impactful solution
         with teams that value clean code and creative thinking.
       
 
